@@ -7,7 +7,7 @@ defmodule Cardboard.Repo.Migrations.CreateActions do
       add :name, :string
       add :description, :string
 
-      timestamp()
+      timestamps()
     end
   end
 end
