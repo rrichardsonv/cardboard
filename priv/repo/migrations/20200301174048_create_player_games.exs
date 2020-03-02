@@ -1,0 +1,10 @@
+defmodule Cardboard.Repo.Migrations.CreatePlayerGames do
+  use Ecto.Migration
+
+  def change do
+    create table(:player_games, primary_key: false) do
+      add :player_id, references("players", type: :uuid), primary_key: true
+      add :game_id, references("games", type: :uuid), primary_key: true
+    end
+  end
+end
